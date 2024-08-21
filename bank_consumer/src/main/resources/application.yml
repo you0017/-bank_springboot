@@ -1,0 +1,16 @@
+spring:
+  activemq:
+    broker-url: tcp://localhost:61616
+    queue: bankMessages
+
+smtp:
+  from: 2092425375@qq.com
+  username: 2092425375@qq.com
+  password: oyitankhkterdbfg
+  host: smtp.qq.com
+  port: 465
+  auth: true
+  email: 2936013465@qq.com
+
+server:
+  port: 8081
