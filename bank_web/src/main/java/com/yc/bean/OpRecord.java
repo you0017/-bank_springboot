@@ -8,8 +8,8 @@ import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
 
 @Data
-@ManagedResource(objectName = "com.yc:name=OpRecord")
-@Component
+//@ManagedResource(objectName = "com.yc:name=OpRecord")
+//@Component
 @TableName("oprecord")
 public class OpRecord {
     @TableId(value="id", type = IdType.AUTO)

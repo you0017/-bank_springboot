@@ -8,7 +8,7 @@ import lombok.ToString;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@ToString
+
 public class MessageBean {
     private Accounts account;
     private double money;

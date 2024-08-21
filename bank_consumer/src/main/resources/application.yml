@@ -3,6 +3,13 @@ spring:
     broker-url: tcp://localhost:61616
     queue: bankMessages
 
+  devtools:
+    restart:
+      enabled: true
+      additional-exclude: src/main/java #重启目录
+      additional-include: static/** #classpath下 static修改不重启
+
+
 smtp:
   from: 2092425375@qq.com
   username: 2092425375@qq.com
@@ -14,3 +21,8 @@ smtp:
 
 server:
   port: 8081
+
+logging:
+  file:
+    path: bank_consumer/logs/
+

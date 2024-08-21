@@ -4,16 +4,24 @@ spring:
     username: root
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource #特别指定数据源类型，默认是HikariCP，现在变成druid
+
   data:
     redis:
       host: localhost
       port: 6379
-      password:
       database: 1
-#jms
+      password: 1234
+  #jms
   activemq:
     broker-url: tcp://localhost:61616
     queue: bankMessages
+
+logging:
+  file:
+    path: bank_web/logs/
+  level:
+    root: info
 
 #mybatis-plus:
 #  configuration:

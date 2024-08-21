@@ -4,11 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email" />
+    <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email">
+      <change afterPath="$PROJECT_DIR$/bank_consumer/src/test/java/com/yc/AllTestSuit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_consumer/src/test/java/com/yc/AppConfigTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/Accounts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/MessageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/MessageBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/OpRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/OpRecord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/service/impl/BankBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/service/impl/BankBizImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PATH_TO_GIT" value="E:\git\Git\bin\git.exe" />
@@ -41,6 +64,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "jdk.selected.JAVA_MODULE": "17",
     "last_opened_file_path": "F:/java/java/yc/Three_installments/bank_springboot/bank_web/src/main/resources",
     "node.js.detected.package.eslint": "true",
@@ -50,16 +75,25 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web\src\main\resources" />
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web\src\main\java\com\yc" />
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_consumer\src\main\resources" />
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_consumer\src\main\java\com\yc" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.yc" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -70,6 +104,22 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.BankWebApplication">
+    <configuration name="AppConfigTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank_consumer" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yc.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yc" />
+      <option name="MAIN_CLASS_NAME" value="com.yc.AppConfigTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BankConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="bank_consumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.BankConsumerApplication" />
@@ -99,6 +149,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.BankWebApplication" />
+        <item itemvalue="JUnit.AppConfigTest.test" />
         <item itemvalue="Spring Boot.BankConsumerApplication" />
       </list>
     </recent_temporary>
@@ -112,7 +163,7 @@
       <option name="presentableId" value="Default" />
       <updated>1713616626231</updated>
       <workItem from="1724219954334" duration="1853000" />
-      <workItem from="1724221817452" duration="303000" />
+      <workItem from="1724221817452" duration="4771000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -130,7 +181,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724222109430</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
+      <option name="closed" value="true" />
+      <created>1724222382598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1724222382598</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -139,5 +198,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="springboot3_mybatisPlus_springCache_redis_jms_email" />
     <option name="LAST_COMMIT_MESSAGE" value="springboot3_mybatisPlus_springCache_redis_jms_email" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bank_web/src/main/java/com/yc/service/impl/BankBizImpl.java</url>
+          <line>125</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

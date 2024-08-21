@@ -27,7 +27,7 @@ import org.springframework.transaction.annotation.Transactional;
         readOnly = false,
         rollbackFor = {RuntimeException.class}
 )
-@ManagedResource(objectName = "com.yc:name=BankBiz")
+//@ManagedResource(objectName = "com.yc:name=BankBiz")
 public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements BankBiz {
 
     @Autowired
