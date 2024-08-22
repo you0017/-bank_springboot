@@ -14,8 +14,8 @@ public class OpRecord {
     private Integer id;
     private Integer accountid;
     private Double opmoney;
-    @TableField(value = "optime")
-    //@TableField(value = "optime",fill = FieldFill.UPDATE)
+    //@TableField(value = "optime")
+    @TableField(value = "optime",fill = FieldFill.INSERT)
     private String opTime;
     @TableField(value = "optype")
     private OpType opType;

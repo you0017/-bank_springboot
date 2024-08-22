@@ -7,6 +7,7 @@ import com.yc.service.BankBiz;
 import com.yc.util.JmsMessageProducer;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -60,7 +61,7 @@ public class BankBizEmailAspect {
 
 
 
-    @After(value = "deposit() || withdraw() || transfer()")
+    @AfterReturning(value = "deposit() || withdraw() || transfer()")
     public void sendEmail(JoinPoint joinPoint) {
 
         int accountid = (int) joinPoint.getArgs()[0];

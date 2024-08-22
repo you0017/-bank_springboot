@@ -14,6 +14,7 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -47,7 +48,7 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
         record.setOpmoney(account.getBalance());
         record.setOpType(OpType.DEPOSITE);
         record.setTransferid(account.getAccountId());
-        record.setOpTime(LocalDateTime.now().toString());
+        //record.setOpTime(LocalDateTime.now().toString());
         opRecordMapper.insert(record);
         //操作3：构建返回值
 
@@ -80,7 +81,7 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
         record.setOpmoney(money);
         record.setOpType(OpType.DEPOSITE);
         record.setTransferid(accountid);
-        record.setOpTime(LocalDateTime.now().toString());
+        //record.setOpTime(LocalDateTime.now().toString());
         opRecordMapper.insert(record);
         return a;
 
@@ -109,7 +110,7 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
         record.setOpmoney(money);
         record.setOpType(OpType.WITHDRAW);
         record.setTransferid(accountid);
-        record.setOpTime(LocalDateTime.now().toString());
+        //record.setOpTime(LocalDateTime.now().toString());
 
         opRecordMapper.insert(record);
 
@@ -126,6 +127,9 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
     @CachePut(value = "bank_web",key = "#accountId")
     public Accounts transfer(Integer accountId,Double balance, int toAccountId) {
         this.deposit(toAccountId,balance);
+        /*if (true){
+            throw new RuntimeException("余额不足");
+        }*/
         Accounts a = this.withdraw(accountId,balance);
         return a;
     }

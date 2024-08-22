@@ -5,24 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/Accounts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/test/java/com/yc/mapper/AccountMapperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/MyMetaObjectHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/Listener/JmsMessageThreadStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/Listener/JmsMessageThreadStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/Account.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/MessageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/MessageBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/VelocityTemplateBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/VelocityTemplateBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/VelocityTemplateBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/VelocityTemplateBizImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/test/java/com/yc/AppConfigTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/test/java/com/yc/AppConfigTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/aspect/BankBizEmailAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/aspect/BankBizEmailAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/Accounts.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/OpRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/OpRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/controller/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/controller/AccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/handler/GlobalException.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/handler/GlobalException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/service/impl/BankBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/service/impl/BankBizImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -113,11 +101,12 @@
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
+        <option value="Application" />
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BankConsumerApplication">
+  <component name="RunManager" selected="Spring Boot.BankWebApplication">
     <configuration name="BankConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="bank_consumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.BankConsumerApplication" />
@@ -163,7 +152,8 @@
       <workItem from="1724221817452" duration="6642000" />
       <workItem from="1724228476887" duration="3865000" />
       <workItem from="1724291278435" duration="20000" />
-      <workItem from="1724305986238" duration="2244000" />
+      <workItem from="1724305986238" duration="5773000" />
+      <workItem from="1724312722835" duration="637000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -197,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724226608824</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
+      <option name="closed" value="true" />
+      <created>1724308342571</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1724308342571</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
