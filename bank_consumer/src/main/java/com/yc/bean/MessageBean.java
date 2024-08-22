@@ -10,7 +10,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class MessageBean {
-    private Account account;
+    private Accounts account;
     private double money;
     private Integer toAccountId;
     private String email;

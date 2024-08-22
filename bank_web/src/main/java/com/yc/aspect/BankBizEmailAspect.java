@@ -72,6 +72,9 @@ public class BankBizEmailAspect {
             toAccountId = 0;
         }
         Accounts account = bankBiz.findAccount(accountid);
+        if (account == null){
+            throw new RuntimeException("账户不存在");
+        }
         String email = account.getEmail();
         String info;
         String methodName = joinPoint.getSignature().getName();

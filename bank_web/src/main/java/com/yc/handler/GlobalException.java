@@ -7,9 +7,11 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @RestControllerAdvice
 public class GlobalException {
 
-    @ExceptionHandler(Exception.class)
-    public JsonModel exceptionHandler(Exception e) {
+    @ExceptionHandler(RuntimeException.class)
+    public JsonModel exceptionHandler(RuntimeException e) {
+        e.printStackTrace();
         JsonModel jm = new JsonModel();
+        jm.setCode(0);
         jm.setError(e.getMessage());
         return jm;
     }

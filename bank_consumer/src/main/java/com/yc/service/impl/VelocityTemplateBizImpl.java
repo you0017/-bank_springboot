@@ -1,13 +1,11 @@
 package com.yc.service.impl;
 
-import com.yc.bean.Account;
+import com.yc.bean.Accounts;
 import com.yc.service.VelocityTemplateBiz;
-import com.yc.util.MailBiz;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 import java.io.StringWriter;
@@ -37,7 +35,7 @@ public class VelocityTemplateBizImpl implements VelocityTemplateBiz {
     private DateFormat partDf;
 
 
-    public String genEmailContent(String opType,Account account,double money,int toaccountid) {
+    public String genEmailContent(String opType, Accounts account, double money, int toaccountid) {
         String info;
         if (opType.equals("deposit")){
             info = deposit(account, money);
@@ -51,7 +49,7 @@ public class VelocityTemplateBizImpl implements VelocityTemplateBiz {
         return info;
     }
 
-    private String deposit(Account account, double money) {
+    private String deposit(Accounts account, double money) {
         /*Date date = new Date();
         DateFormat df = new SimpleDateFormat("yyyy年MM月dd日 hh:mm");
         String dateStr = df.format(date);
@@ -72,7 +70,7 @@ public class VelocityTemplateBizImpl implements VelocityTemplateBiz {
 
         //托管
         //VelocityContext context = new VelocityContext();//模板上下文，用于存占位符的值
-        context.put("accountid", account.getAccountid());
+        context.put("accountid", account.getAccountId());
         context.put("email", account.getEmail());
         context.put("subject","存款操作通知");
         context.put("optime",fullDf.format(d));
@@ -94,7 +92,7 @@ public class VelocityTemplateBizImpl implements VelocityTemplateBiz {
     }
 
 
-    private String withdraw(Account account, double money) {
+    private String withdraw(Accounts account, double money) {
         /*Date date = new Date();
         DateFormat df = new SimpleDateFormat("yyyy年MM月dd日 hh:mm");
         String dateStr = df.format(date);
@@ -114,7 +112,7 @@ public class VelocityTemplateBizImpl implements VelocityTemplateBiz {
 
         //托管
         //VelocityContext context = new VelocityContext();//模板上下文，用于存占位符的值
-        context.put("accountid", account.getAccountid());
+        context.put("accountid", account.getAccountId());
         context.put("email", account.getEmail());
         context.put("subject","存款操作通知");
         context.put("optime",fullDf.format(d));
@@ -135,7 +133,7 @@ public class VelocityTemplateBizImpl implements VelocityTemplateBiz {
         return "";
     }
 
-    private String transfer(Account account, double money, int toAccountId) {
+    private String transfer(Accounts account, double money, int toAccountId) {
         /*Date date = new Date();
         DateFormat df = new SimpleDateFormat("yyyy年MM月dd日 hh:mm");
         String dateStr = df.format(date);
@@ -155,7 +153,7 @@ public class VelocityTemplateBizImpl implements VelocityTemplateBiz {
 
         //托管
         //VelocityContext context = new VelocityContext();//模板上下文，用于存占位符的值
-        context.put("accountid", account.getAccountid());
+        context.put("accountid", account.getAccountId());
         context.put("email", account.getEmail());
         context.put("subject","存款操作通知");
         context.put("optime",fullDf.format(d));

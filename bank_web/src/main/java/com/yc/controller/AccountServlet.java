@@ -26,6 +26,12 @@ public class AccountServlet {
         }
 
         Accounts account = bankBiz.email(accountId);
+        if (account == null){
+            JsonModel jm = new JsonModel();
+            jm.setCode(0);
+            jm.setObj("accountId不存在");
+            return jm;
+        }
         JsonModel jm = new JsonModel();
         jm.setCode(1);
         jm.setObj(account);
@@ -62,7 +68,6 @@ public class AccountServlet {
 
     @GetMapping("/query")
     public JsonModel query(@RequestParam(value = "accountId",defaultValue = "0") Integer accountId) {
-
         if (accountId == 0){
             JsonModel jm = new JsonModel();
             jm.setCode(0);

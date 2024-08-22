@@ -1,8 +1,6 @@
 package com.yc.bean;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 import org.springframework.jmx.export.annotation.ManagedResource;
 import org.springframework.stereotype.Component;
@@ -16,7 +14,11 @@ public class OpRecord {
     private Integer id;
     private Integer accountid;
     private Double opmoney;
-    private String datetime;
-    private OpType optype;
+    @TableField(value = "optime")
+    //@TableField(value = "optime",fill = FieldFill.UPDATE)
+    private String opTime;
+    @TableField(value = "optype")
+    private OpType opType;
+    @TableField(value = "transferid")
     private Integer transferid;
 }

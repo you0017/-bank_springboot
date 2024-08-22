@@ -26,6 +26,10 @@ public class JmsMessageThreadStarter implements CommandLineRunner {
     @Autowired
     private MailBiz mailBiz;
 
+    public JmsMessageThreadStarter(){
+        System.out.println("hello");
+    }
+
     @PostConstruct
     public void init() {
         // 启动一个线程来接收消息

@@ -18,6 +18,8 @@ import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.time.LocalDateTime;
+
 @Service
 @Log4j2
 @Transactional(
@@ -43,7 +45,9 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
         OpRecord record = new OpRecord();
         record.setAccountid(account.getAccountId());
         record.setOpmoney(account.getBalance());
-        record.setOptype(OpType.DEPOSITE);
+        record.setOpType(OpType.DEPOSITE);
+        record.setTransferid(account.getAccountId());
+        record.setOpTime(LocalDateTime.now().toString());
         opRecordMapper.insert(record);
         //操作3：构建返回值
 
@@ -61,6 +65,10 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
             log.error("账户不存在:"+accountid);
             throw new RuntimeException("账户不存在:"+accountid+",无法完成存款操作");
         }
+        if (a==null){
+            log.error("账户不存在:"+accountid);
+            throw new RuntimeException("账户不存在:"+accountid+",无法完成存款操作");
+        }
         a.setBalance(a.getBalance()+money);
         this.lambdaUpdate()
                         .eq(Accounts::getAccountId,accountid)
@@ -70,7 +78,9 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
         OpRecord record = new OpRecord();
         record.setAccountid(accountid);
         record.setOpmoney(money);
-        record.setOptype(OpType.DEPOSITE);
+        record.setOpType(OpType.DEPOSITE);
+        record.setTransferid(accountid);
+        record.setOpTime(LocalDateTime.now().toString());
         opRecordMapper.insert(record);
         return a;
 
@@ -88,12 +98,19 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
             throw new RuntimeException("账户不存在:"+accountid+",无法完成存款操作");
         }
 
+        if (a==null){
+            log.error("账户不存在:"+accountid);
+            throw new RuntimeException("账户不存在:"+accountid+",无法完成存款操作");
+        }
 
         //操作2：流水记录
         OpRecord record = new OpRecord();
         record.setAccountid(accountid);
         record.setOpmoney(money);
-        record.setOptype(OpType.WITHDRAW);
+        record.setOpType(OpType.WITHDRAW);
+        record.setTransferid(accountid);
+        record.setOpTime(LocalDateTime.now().toString());
+
         opRecordMapper.insert(record);
 
         //TODO:要判断余额是否足够,利用数据库中的约束来完成金额的检查

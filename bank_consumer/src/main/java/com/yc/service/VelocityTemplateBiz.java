@@ -1,10 +1,7 @@
 package com.yc.service;
 
-import com.yc.bean.Account;
-
-import java.io.StringWriter;
-import java.util.Date;
+import com.yc.bean.Accounts;
 
 public interface VelocityTemplateBiz {
-    public String genEmailContent(String opType, Account account, double money, int toaccountid);
+    public String genEmailContent(String opType, Accounts account, double money, int toaccountid);
 }

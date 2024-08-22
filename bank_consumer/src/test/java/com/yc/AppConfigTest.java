@@ -9,11 +9,11 @@ import org.springframework.test.context.junit4.SpringRunner;
 import static org.junit.Assert.*;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration(classes = AppConfig.class)
+@ContextConfiguration(classes = AppConfigTest.class)
 public class AppConfigTest {
 
     @Test
-    public void test() {
+    public void test3() {
         System.out.println("test");
     }
 

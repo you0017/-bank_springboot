@@ -10,7 +10,7 @@ import org.springframework.cache.annotation.EnableCaching;
 @EnableCaching
 public class BankWebApplication {
     public static void main(String[] args) {
-        System.out.println("启动成功");
+        //System.out.println("启动成功");
         SpringApplication.run(BankWebApplication.class, args);
     }
 }
