@@ -4,48 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email">
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/JsonModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/config/RedisConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/controller/NormalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/CacheService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/CacheServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/WebSocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/data.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/0.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/images/9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/js/axios.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/js/jquery-1.9.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/static/js/vue.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/META-INF/b.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/META-INF/resources/a1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/public/a4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/public/c.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/resources/a2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/resources/d.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/static/a3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/Listener/JmsMessageThreadStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/Listener/JmsMessageThreadStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/Accounts.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/Accounts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/MessageBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/bean/MessageBean.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/MailBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/MailBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/MyMetaObjectHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/MyMetaObjectHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/RedisConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/WebMvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/WebMvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/controller/AccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/controller/BankController.java" afterDir="false" />
-    </list>
+    <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -203,6 +162,7 @@
       <workItem from="1724314805480" duration="14941000" />
       <workItem from="1724378699360" duration="10000" />
       <workItem from="1724378744596" duration="13000" />
+      <workItem from="1724381918513" duration="421000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -252,7 +212,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724313378001</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
+      <option name="closed" value="true" />
+      <created>1724382146055</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724382146055</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
