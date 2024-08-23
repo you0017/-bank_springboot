@@ -88,10 +88,10 @@ public class BankBizEmailAspect {
         } else {
             info = "";
         }*/
-        new Thread(() -> {
+        //new Thread(() -> {
             //mailBiz.sendMail(email, "银行通知", info);
             jmsMessageProducer.sendMessage(new MessageBean(account, money, toAccountId,email, methodName));
-        }).start();
+        //}).start();
     }
 
     /*private String deposit(Account account, double money) {

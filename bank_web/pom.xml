@@ -39,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid-spring-boot-starter</artifactId>
+            <artifactId>druid-spring-boot-3-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>mysql</groupId>
@@ -74,12 +74,8 @@
 
         <!--aop-->
         <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjrt</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.aspectj</groupId>
-            <artifactId>aspectjweaver</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
 
 

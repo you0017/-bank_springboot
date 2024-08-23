@@ -6,6 +6,8 @@ import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.scheduling.annotation.Async;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -17,6 +19,7 @@ public class JmsMessageProducer {
     @Value("${spring.activemq.queue}")
     private String queueName;
 
+    @Async//线程池异步
     public void sendMessage(MessageBean messageBean) {
         //String message = messageBean.toString();
         //将bean转成一个json字符串，序列化后存到activeMQ

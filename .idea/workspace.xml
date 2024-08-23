@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email" />
+    <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/aspect/BankBizEmailAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/aspect/BankBizEmailAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/util/JmsMessageProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/util/JmsMessageProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/static/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,8 +23,8 @@
       <list>
         <option value="JUnit4 Test Class" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -110,7 +118,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BankConsumerApplication">
+  <component name="RunManager" selected="Spring Boot.BankWebApplication">
     <configuration name="BankConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="bank_consumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.BankConsumerApplication" />
@@ -140,8 +148,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BankConsumerApplication" />
         <item itemvalue="Spring Boot.BankWebApplication" />
+        <item itemvalue="Spring Boot.BankConsumerApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -163,6 +171,8 @@
       <workItem from="1724378699360" duration="10000" />
       <workItem from="1724378744596" duration="13000" />
       <workItem from="1724381918513" duration="421000" />
+      <workItem from="1724392459859" duration="6940000" />
+      <workItem from="1724399464020" duration="290000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -220,11 +230,30 @@
       <option name="project" value="LOCAL" />
       <updated>1724382146055</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
+      <option name="closed" value="true" />
+      <created>1724392603488</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724392603488</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="springboot3_mybatisPlus_springCache_redis_jms_email" />
