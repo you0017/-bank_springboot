@@ -1,7 +1,11 @@
 package com.yc.util;
 
+import com.yc.bean.Accounts;
+import com.yc.bean.Message;
+import com.yc.bean.MessageBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
@@ -16,7 +20,8 @@ public class MailBiz {
     @Autowired
     private JavaMailSender mailSender;
 
-    public void sendMail(String to, String subject, String content) {
+    @Cacheable(cacheNames = "message", key = "#time")
+    public Message sendMail(String to, String subject, String content, MessageBean mb,String time) {
         //SimpleMailMessage mail = new SimpleMailMessage();//不包括附件
         MimeMessage mm = mailSender.createMimeMessage();//可以包括附件
 
@@ -31,7 +36,9 @@ public class MailBiz {
         }catch(Exception e){
             e.printStackTrace();
         }
+        Message build = Message.builder().context(content).subject(subject).messageBean(mb).time(time).build();
 
+        return build;
 
     }
 }

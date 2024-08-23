@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邮件列表</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .email-count {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .table-container {
+            overflow-y: auto;
+            max-height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        td .content {
+            max-height: 80px;
+            overflow-y: auto;
+            padding-right: 15px;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        /*.cartoon-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: url('cartoon-number.svg') no-repeat center center;
+            background-size: contain;
+        }*/
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="email-count">
+        发送邮件数: <span v-if="arr.length==0"><img src="images/0.png" width="20px"></span>
+                    <span v-else><img v-for="item in arr" :src="'images/'+item+'.png'" width="20px"></span>
+        <!--<span id="emailCount" class="cartoon-number"></span>-->
+    </div>
+    <div class="table-container">
+        <table>
+            <thead>
+            <tr>
+                <th>操作者</th>
+                <th>收款人</th>
+                <th>标题</th>
+                <th>操作</th>
+                <th>发送时间</th>
+                <th>内容</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for="(item,index) in m">
+                <td>{{item.messageBean.account.accountId}}</td>
+                <td>{{item.messageBean.toAccountId}}</td>
+                <td>{{item.subject}}</td>
+                <td v-if="item.messageBean.opType=='transfer'">转账</td>
+                <td v-else-if="item.messageBean.opType=='withdraw'">取款</td>
+                <td v-else-if="item.messageBean.opType=='deposit'">存款</td>
+                <td v-else="item.messageBean.opType=='openAccount'">开户</td>
+                <td>{{item.time}}</td>
+                <td><div class="content" v-html="decodeHtmlEntities(item.context)"></div></td>
+            </tr>
+
+
+
+
+            <!-- 你可以继续添加更多的邮件记录 -->
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+<script src="js/axios.js"></script>
+<script src="js/vue.js"></script>
+
+<script>
+    let vm = new Vue({
+        el: '.container',
+        data: {
+            m: [],
+            //服务器数据
+            protocol:'',
+            host:'',
+            endpoint:'',
+            contextPath:'',
+            arr:[],
+        },
+        mounted() {
+            this.getEmailCount();
+        },
+        methods: {
+            /**
+             * 用于获取服务器路径，方便websocket
+             * @returns {*}
+             */
+            getServerInfo(){
+                return axios.get("normal.action");
+            },
+            initWebSocket() {
+                // 获取当前页面的协议、主机和端口
+                //const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+                const protocol = this.protocol;
+
+
+                //const host = window.location.host;
+                //const host = this.host;
+                //考虑nginx反向代理没有端口的问题
+                const host = window.location.host.includes(':') ? window.location.host : window.location.host + ':8080';
+
+                //const endpoint = '/shop_war/echo';
+                const endpoint = this.contextPath +'/ws';
+                //const endpoint = this.endpoint+ this.contextPath +'/AdminEcho';
+                //const endpoint = '/shop/echo';
+
+                // 动态生成 WebSocket 的 URL
+                const wsUrl = `${protocol}://${host}${endpoint}`;
+                //const wsUrl = `${protocol}://${host}:${endpoint}`;
+
+                // 创建 WebSocket 连接
+                var ws = new WebSocket(wsUrl);
+
+                ws.onopen = function () {
+                    console.log('WebSocket 连接已经建立。');
+                    // ws.send('Hello, server!');
+                };
+
+                ws.onmessage = function (event) {
+                    console.log('收到服务器消息：', event.data);
+                    //该刷新了
+                    if (event.data == 1){
+                        vm.getAllMessage().then(result=>{
+                            if (result.data.code==0){
+
+                            }else{
+                                vm.$data.m=result.data.obj;
+                                vm.img();
+                            }
+                        })
+                    }
+                };
+
+                ws.onerror = function (event) {
+                    console.error('WebSocket 连接出现错误：', event);
+                };
+
+                ws.onclose = function () {
+                    console.log('WebSocket 连接已经关闭。');
+                };
+
+                window.onbeforeunload = function() {
+                    app.$data.ws.close();
+                };
+
+                this.ws = ws;
+            },
+            getAllMessage(){
+                return axios.get("normal.action/getAllMessage");
+            },
+            img(){
+                //数字图片
+                this.arr=[];
+                let len = this.m.length;
+                while (len>0){
+                    this.arr.push(len%10);
+                    len = Math.floor(len / 10);
+                }
+                this.arr = this.arr.reverse();
+            },
+            decodeHtmlEntities(text) {
+                const textArea = document.createElement('textarea');
+                textArea.innerHTML = text;
+                return textArea.value;
+            }
+        },
+        mounted(){
+            axios.all([this.getAllMessage(),this.getServerInfo()]).then(axios.spread((result1,result5)=> {
+                if (result1.data.code == 0){
+
+                }else{
+                    this.$data.m = result1.data.obj;
+                    this.img();
+                }
+                if (result5.data.code == 0) {
+
+                } else {
+                    this.protocol = result5.data.obj.protocol;
+                    this.host = result5.data.obj.host;
+                    this.endpoint = result5.data.obj.port;
+                    this.contextPath = result5.data.obj.contextPath;
+                    //动态初始化websocket的url，并建立连接，用来提醒该刷新消息了
+                    this.initWebSocket();
+                }
+            }));
+        }
+    })
+</script>
+</html>

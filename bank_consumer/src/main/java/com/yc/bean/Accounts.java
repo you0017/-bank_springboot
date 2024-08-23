@@ -3,6 +3,7 @@ package com.yc.bean;
 
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -14,6 +15,7 @@ import java.io.Serializable;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Accounts implements Serializable {
     private Integer accountId;
     private Double balance;

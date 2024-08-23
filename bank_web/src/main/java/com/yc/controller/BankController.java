@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/account.action")
-public class AccountServlet {
+public class BankController {
 
     @Autowired
     private BankBiz bankBiz;

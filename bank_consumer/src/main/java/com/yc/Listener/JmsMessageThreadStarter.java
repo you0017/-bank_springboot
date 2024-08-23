@@ -4,12 +4,17 @@ import com.google.gson.Gson;
 import com.yc.bean.MessageBean;
 import com.yc.service.VelocityTemplateBiz;
 import com.yc.util.MailBiz;
+import com.yc.util.WebSocketServer;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Component;
+
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 /**
  * 程序启动时启动这个线程来接收消息
@@ -25,10 +30,9 @@ public class JmsMessageThreadStarter implements CommandLineRunner {
     private VelocityTemplateBiz velocityTemplateBiz;
     @Autowired
     private MailBiz mailBiz;
+    @Autowired
+    private WebSocketServer webSocketServer;
 
-    public JmsMessageThreadStarter(){
-        System.out.println("hello");
-    }
 
     @PostConstruct
     public void init() {
@@ -45,7 +49,12 @@ public class JmsMessageThreadStarter implements CommandLineRunner {
                     MessageBean mb = gson.fromJson(message, MessageBean.class);
                     //产生要发送的邮件内容
                     String context = velocityTemplateBiz.genEmailContent(mb.getOpType(),mb.getAccount(),mb.getMoney(),mb.getToAccountId());
-                    mailBiz.sendMail(mb.getAccount().getEmail(),"账户变动通知",context);
+                    Date date = new Date();
+                    SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+                    mailBiz.sendMail(mb.getAccount().getEmail(),"账户变动通知",context,mb, simpleDateFormat.format(date));
+
+                    webSocketServer.send("1");
+
 
                     Thread.sleep(1000); // 延迟一秒钟后继续轮询
                 } catch (InterruptedException e) {

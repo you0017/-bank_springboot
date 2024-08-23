@@ -5,11 +5,13 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class MessageBean {
+public class MessageBean implements Serializable {
     private Accounts account;
     private double money;
     private Integer toAccountId;
