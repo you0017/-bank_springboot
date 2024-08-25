@@ -3,6 +3,7 @@ package com.yc.service.impl;
 import com.yc.bean.Accounts;
 import com.yc.service.VelocityTemplateBiz;
 import com.yc.strategy.MessageStrategy;
+import com.yc.strategy.impl.StrategyContext;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,20 +20,13 @@ import java.util.Map;
 public class VelocityTemplateBizImpl implements VelocityTemplateBiz {
 
     @Autowired
-    private Map<String, MessageStrategy> messageStrategies;
+    private StrategyContext strategyContext;
 
 
-    public String genEmailContent(String opType, Accounts account, double money, int toaccountid) {
-        String info;
+    public String genEmailContent(String opType, Accounts account, double money, int toAccountId) {
 
-        MessageStrategy messageStrategy = messageStrategies.get(opType+"Strategy");
-        if (messageStrategy != null) {
-            info = messageStrategy.transformation(account, money, toaccountid);
-        } else {
-            throw new RuntimeException("未知操作");
-        }
-
-        return info;
+        String s = strategyContext.executeStrategy(opType, account, money, toAccountId);
+        return s;
     }
 
 

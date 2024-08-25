@@ -70,6 +70,8 @@ spring:
         keep-alive: 60s         # 空闲线程存活时间
       thread-name-prefix: "AsyncThread-"
 
+  cache:
+    type: redis
   data:
     redis:
       host: localhost

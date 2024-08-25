@@ -10,6 +10,7 @@ import com.yc.mapper.OpRecordMapper;
 import com.yc.service.BankBiz;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.jmx.export.annotation.ManagedResource;
@@ -142,7 +143,7 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
     }
 
     @Override
-    //@Cacheable(value = "bank_web",key = "#accountid")
+    @Cacheable(value = "bank_web",key = "#accountid")
     public Accounts email(int accountid) {
         Accounts account = this.lambdaQuery()
                 .eq(Accounts::getAccountId,accountid)

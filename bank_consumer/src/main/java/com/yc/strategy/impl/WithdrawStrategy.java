@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import java.io.StringWriter;
 import java.text.DateFormat;
 import java.util.Date;
-@Component
+@Component(value = "withdraw")
 public class WithdrawStrategy implements MessageStrategy {
     @Autowired
     protected VelocityContext context;

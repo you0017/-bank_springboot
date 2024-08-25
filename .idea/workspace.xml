@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email_jmx">
+      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/strategy/impl/StrategyContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/VelocityTemplateBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/VelocityTemplateBizImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/strategy/impl/DepositStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/strategy/impl/DepositStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/strategy/impl/TransferStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/strategy/impl/TransferStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/strategy/impl/WithdrawStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/strategy/impl/WithdrawStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/aspect/BankBizEmailAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/aspect/BankBizEmailAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/service/impl/BankBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/service/impl/BankBizImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -56,8 +61,8 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "15",
-    "RequestMappingsPanelWidth1": "15",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -126,13 +131,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="HTTP Request.BankWebApplication | #2">
-    <configuration name="BankWebApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/BankWebApplication.http" requestIdentifier="#1" runType="Run single request">
-      <method v="2" />
-    </configuration>
-    <configuration name="BankWebApplication | #2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/BankWebApplication.http" index="2" requestIdentifier="#2" runType="Run single request">
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.BankConsumerApplication">
     <configuration name="BankConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="bank_consumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.BankConsumerApplication" />
@@ -162,10 +161,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.BankWebApplication | #2" />
-        <item itemvalue="HTTP Request.BankWebApplication | #1" />
-        <item itemvalue="Spring Boot.BankWebApplication" />
         <item itemvalue="Spring Boot.BankConsumerApplication" />
+        <item itemvalue="Spring Boot.BankWebApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -192,7 +189,7 @@
       <workItem from="1724399775528" duration="112000" />
       <workItem from="1724480199993" duration="22000" />
       <workItem from="1724544505897" duration="12955000" />
-      <workItem from="1724565279186" duration="4514000" />
+      <workItem from="1724565279186" duration="10086000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -298,11 +295,30 @@
       <option name="project" value="LOCAL" />
       <updated>1724567609768</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="springboot3_mybatisPlus_springCache_redis_jms_email_jmx">
+      <option name="closed" value="true" />
+      <created>1724569817957</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1724569817957</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

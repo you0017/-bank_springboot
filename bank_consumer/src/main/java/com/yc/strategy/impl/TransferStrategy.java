@@ -12,7 +12,7 @@ import java.io.StringWriter;
 import java.text.DateFormat;
 import java.util.Date;
 
-@Component
+@Component(value = "transfer")
 public class TransferStrategy implements MessageStrategy {
     @Autowired
     protected VelocityContext context;
