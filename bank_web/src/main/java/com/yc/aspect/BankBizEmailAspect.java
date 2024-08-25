@@ -1,12 +1,10 @@
 package com.yc.aspect;
 
-
 import com.yc.bean.Accounts;
 import com.yc.bean.MessageBean;
 import com.yc.service.BankBiz;
 import com.yc.util.JmsMessageProducer;
 import org.aspectj.lang.JoinPoint;
-import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
