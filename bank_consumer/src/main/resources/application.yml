@@ -15,6 +15,15 @@ spring:
       enabled: true
       additional-exclude: src/main/java #重启目录
       additional-include: static/** #classpath下 static修改不重启
+
+  #@Async异步线程池
+  task:
+    execution:
+      pool:
+        max-size: 16
+        queue-capacity: 1000
+        keep-alive: 60s
+
   mail:
     host: smtp.qq.com
     port: 465
@@ -39,6 +48,8 @@ server:
   port: 8081
 
 logging:
+  level:
+    root: info
   file:
     path: bank_consumer/logs/
 

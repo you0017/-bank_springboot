@@ -5,17 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email">
+      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/JmsMessageConsumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/Listener/JmsMessageThreadStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/Listener/JmsMessageThreadStarter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/config/EmailConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/config/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/config/RedisConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/VelocityTemplateBizImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/VelocityTemplateBizImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/Listener/JmsMessageThreadStarter.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/MailBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/MailBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/aspect/BankBizEmailAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/aspect/BankBizEmailAspect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +178,7 @@
       <workItem from="1724399464020" duration="290000" />
       <workItem from="1724399775528" duration="112000" />
       <workItem from="1724480199993" duration="22000" />
-      <workItem from="1724544505897" duration="10988000" />
+      <workItem from="1724544505897" duration="12728000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -265,7 +260,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724548805728</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
+      <option name="closed" value="true" />
+      <created>1724556844825</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1724556844825</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -3,23 +3,34 @@ package com.yc.util;
 import com.yc.bean.Message;
 import com.yc.bean.MessageBean;
 import jakarta.mail.internet.MimeMessage;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.mail.MailSender;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 @Service
+@Slf4j
 public class MailBiz {
     @Value("${spring.mail.properties.mail.smtp.from}")
     private String from;
     @Autowired
     private JavaMailSender javaMailSender;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
-    @Cacheable(cacheNames = "message", key = "#time")
-    public Message sendMail(String to, String subject, String content, MessageBean mb,String time) {
+
+    @Autowired
+    private WebSocketServer webSocketServer;
+    @Async
+    public void sendMail(String to, String subject, String content, MessageBean mb,String time) {
+        log.info("发送邮件：" + to + "，内容：" + mb.getOpType());
         //SimpleMailMessage mail = new SimpleMailMessage();//不包括附件
         MimeMessage mm = javaMailSender.createMimeMessage();//可以包括附件
 
@@ -35,8 +46,9 @@ public class MailBiz {
             e.printStackTrace();
         }
         Message build = Message.builder().context(content).subject(subject).messageBean(mb).time(time).build();
+        ValueOperations valueOperations = redisTemplate.opsForValue();
+        valueOperations.set("message::"+time,build);
 
-        return build;
-
+        webSocketServer.send("1");
     }
 }
