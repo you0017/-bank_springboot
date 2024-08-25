@@ -142,7 +142,7 @@ public class BankBizImpl extends ServiceImpl<AccountMapper, Accounts> implements
     }
 
     @Override
-    @Cacheable(value = "bank_web",key = "#accountid")
+    //@Cacheable(value = "bank_web",key = "#accountid")
     public Accounts email(int accountid) {
         Accounts account = this.lambdaQuery()
                 .eq(Accounts::getAccountId,accountid)

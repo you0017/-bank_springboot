@@ -31,6 +31,11 @@ public class JmsMessageConsumer {
 
     @JmsListener(destination = "bankMessages")//监听myQueue消息队列
     public void receiverMessage(String message){
+        try {
+            Thread.sleep(1000);
+        }catch (InterruptedException e){
+            log.error("线程休眠异常",e);
+        }
         System.out.println("接收到消息：" + message);
         Gson gson = new Gson();
         MessageBean mb = gson.fromJson(message, MessageBean.class);

@@ -10,7 +10,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @MapperScan("com.yc.mapper")
-//@EnableCaching
+@EnableCaching
 @EnableAsync//启动异步，线程池用
 //@EnableScheduling
 public class BankWebApplication {
