@@ -10,10 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.jms.core.JmsTemplate;
+import org.springframework.mail.MailSender;
 import org.springframework.stereotype.Component;
 
 import java.text.SimpleDateFormat;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**
@@ -30,6 +30,7 @@ public class JmsMessageThreadStarter implements CommandLineRunner {
     private VelocityTemplateBiz velocityTemplateBiz;
     @Autowired
     private MailBiz mailBiz;
+
     @Autowired
     private WebSocketServer webSocketServer;
 

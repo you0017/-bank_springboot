@@ -3,11 +3,6 @@ spring:
     broker-url: tcp://localhost:61616
     queue: bankMessages
 
-  devtools:
-    restart:
-      enabled: true
-      additional-exclude: src/main/java #重启目录
-      additional-include: static/** #classpath下 static修改不重启
   data:
     redis:
       host: localhost
@@ -15,14 +10,30 @@ spring:
       database: 1
       password: 1234
 
-smtp:
-  from: 2092425375@qq.com
-  username: 2092425375@qq.com
-  password: oyitankhkterdbfg
-  host: smtp.qq.com
-  port: 465
-  auth: true
-  email: 2936013465@qq.com
+  devtools:
+    restart:
+      enabled: true
+      additional-exclude: src/main/java #重启目录
+      additional-include: static/** #classpath下 static修改不重启
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: #@qq.com
+    password: #
+    default-encoding: UTF-8
+    default-reply-to: #@qq.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          from: #@qq.com
+          starttls:
+            enable: true
+            required: true
+          ssl:
+            enable: true
+    protocol: smtp
+
 
 server:
   port: 8081
