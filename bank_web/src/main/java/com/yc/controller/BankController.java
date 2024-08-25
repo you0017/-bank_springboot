@@ -16,6 +16,7 @@ public class BankController {
     private BankBiz bankBiz;
     @Autowired
     private AccountMapper accountMapper;
+
     @GetMapping("/getEmail")
     public JsonModel email (@RequestParam(value = "accountId",defaultValue = "0") Integer accountId){
         if (accountId == 0){

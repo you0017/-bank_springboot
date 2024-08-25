@@ -1,5 +1,6 @@
 package com.yc.controller;
 
+
 import com.yc.bean.JsonModel;
 import com.yc.bean.Message;
 import com.yc.service.CacheService;
@@ -23,6 +24,7 @@ public class NormalController {
 
     @Autowired
     private CacheService cacheService;
+
     @GetMapping
     public JsonModel getServerInfo(HttpServletRequest request) {
         Map<String, String> serverInfo = new HashMap<>();

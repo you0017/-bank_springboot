@@ -89,6 +89,8 @@ spring:
       additional-paths: src/main/java #设置监听源码变更的目录 -> 这个目录中的文件变更，则重启
       exclude: static/** #排除监听的目录，不重启
 
+
+
 #jmx
 management:
   endpoints:
