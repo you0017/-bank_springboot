@@ -1,6 +1,8 @@
 package com.yc.mapper;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yc.bean.Accounts;
 import org.junit.Assert;
 import org.junit.Test;
@@ -37,5 +39,21 @@ public class AccountMapperTest {
     @Test
     public void testAccountMapperSelect(){
         QueryWrapper<Accounts> wrapper = new QueryWrapper<Accounts>();
+    }
+
+    @Test
+    public void testPage(){
+        Page<Accounts> page = Page.of(1, 2);
+        LambdaQueryWrapper<Accounts> wrapper = new LambdaQueryWrapper();
+        wrapper.select(Accounts::getAccountId,Accounts::getBalance);
+        Page<Accounts> accountsPage = accountMapper.selectPage(page, wrapper);
+        System.out.println(accountsPage.getRecords());
+        System.out.println(accountsPage.getTotal());
+    }
+
+    @Test
+    public void testSelectByAccountId(){
+        Accounts accounts = accountMapper.selectByAccountId("2");
+        System.out.println(accounts);
     }
 }

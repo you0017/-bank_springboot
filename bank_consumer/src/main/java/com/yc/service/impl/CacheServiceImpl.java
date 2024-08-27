@@ -22,7 +22,7 @@ public class CacheServiceImpl implements CacheService {
      */
     public List<Message> getMessagesWithPrefix() {
         // 获取所有以 "message" 开头的键
-        Set<String> keys = redisTemplate.keys("message:*");
+        Set<String> keys = redisTemplate.keys("message*");
 
         if (keys != null && !keys.isEmpty()) {
             return keys.stream()

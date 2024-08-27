@@ -28,6 +28,9 @@ public class MailBiz {
 
     @Autowired
     private WebSocketServer webSocketServer;
+
+    @Value("${spring.cache.cacheName}")
+    private String bankName;
     @Async
     public void sendMail(String to, String subject, String content, MessageBean mb,String time) {
         log.info("发送邮件：" + to + "，内容：" + mb.getOpType());
@@ -47,7 +50,7 @@ public class MailBiz {
         }
         Message build = Message.builder().context(content).subject(subject).messageBean(mb).time(time).build();
         ValueOperations valueOperations = redisTemplate.opsForValue();
-        valueOperations.set("message::"+time,build);
+        valueOperations.set(bankName+time,build);
 
         webSocketServer.send("1");
     }

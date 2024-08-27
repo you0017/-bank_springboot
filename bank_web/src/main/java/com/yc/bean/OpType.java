@@ -1,12 +1,15 @@
 package com.yc.bean;
 
 
+import com.baomidou.mybatisplus.annotation.EnumValue;
+
 //@Data  '@Data' is only supported on a class type    “@Data”仅在类类型上受支持
 public enum OpType {
     WITHDRAW("withdraw", 1),
     DEPOSITE("deposite", 2),
     TRANSFER("transfer", 3);
 
+    @EnumValue
     private String key;
     private int value;
 

@@ -11,8 +11,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 @Log4j2
 public class RedisConfiguration {
 
-    //springboot3不需要了,除非不用springCache 手动用
-    /*@Bean
+    @Bean
     public RedisTemplate redisTemplate(RedisConnectionFactory redisConnectionFactory){
         log.info("开始创建redis模板对象");
         RedisTemplate redisTemplate = new RedisTemplate();
@@ -21,5 +20,5 @@ public class RedisConfiguration {
         //设置reids key的序列化器
         redisTemplate.setKeySerializer(new StringRedisSerializer());
         return redisTemplate;
-    }*/
+    }
 }

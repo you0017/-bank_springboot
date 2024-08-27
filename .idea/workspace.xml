@@ -5,17 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email_jmx">
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/api/Q.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_consumer/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/CORSConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/MyBatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/OpenAPIConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/task/RedisTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bank_web/src/test/java/com/yc/mapper/OpRecordMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/controller/NormalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/controller/NormalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/CacheServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/CacheServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/MailBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/MailBiz.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/OpType.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/OpType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/RedisConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/controller/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/controller/BankController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/mapper/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/mapper/AccountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/mapper/OpRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/mapper/OpRecordMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/test/java/com/yc/mapper/AccountMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/test/java/com/yc/mapper/AccountMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,10 +42,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -71,7 +88,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "F:/java/java/yc/Three_installments/bank_springboot/bank_consumer/src/main/resources/static",
+    "last_opened_file_path": "F:/java/java/yc/Three_installments/bank_springboot/bank_web/src/main/resources",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -94,16 +111,17 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web\src\main\resources" />
+      <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_consumer\src\main\resources" />
+      <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_consumer" />
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_consumer\src\main\resources\static" />
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web\src\main\resources\static" />
-      <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web\src\main\resources\resources" />
-      <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web\src\main\resources\META-INF\resources" />
-      <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web\src\main" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web" />
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_web\src\main\resources" />
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_consumer\src\main\resources\static" />
       <recent name="F:\java\java\yc\Three_installments\bank_springboot\bank_consumer\src\main" />
@@ -132,11 +150,59 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BankWebApplication">
+  <component name="RunManager" selected="Spring Boot.BankConsumerApplication">
+    <configuration name="AccountMapperTest.testPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yc.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yc.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.yc.mapper.AccountMapperTest" />
+      <option name="METHOD_NAME" value="testPage" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpRecordMapperTest.Page" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yc.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yc.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.yc.mapper.OpRecordMapperTest" />
+      <option name="METHOD_NAME" value="Page" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="OpRecordMapperTest.selectByAccountId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="bank_web" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.yc.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.yc.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.yc.mapper.OpRecordMapperTest" />
+      <option name="METHOD_NAME" value="selectByAccountId" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="BankConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bank_consumer" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.BankConsumerApplication" />
-      <option name="VM_PARAMETERS" value="-Dserver.port=8081" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.yc.*" />
@@ -148,6 +214,7 @@
       </method>
     </configuration>
     <configuration name="BankWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="bank_web" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.yc.BankWebApplication" />
       <extension name="coverage">
@@ -162,8 +229,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BankWebApplication" />
         <item itemvalue="Spring Boot.BankConsumerApplication" />
+        <item itemvalue="Spring Boot.BankWebApplication" />
+        <item itemvalue="JUnit.OpRecordMapperTest.Page" />
+        <item itemvalue="JUnit.AccountMapperTest.testPage" />
+        <item itemvalue="JUnit.OpRecordMapperTest.selectByAccountId" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +260,14 @@
       <workItem from="1724399775528" duration="112000" />
       <workItem from="1724480199993" duration="22000" />
       <workItem from="1724544505897" duration="12955000" />
-      <workItem from="1724565279186" duration="11293000" />
+      <workItem from="1724565279186" duration="12342000" />
+      <workItem from="1724631721887" duration="13105000" />
+      <workItem from="1724652904244" duration="1055000" />
+      <workItem from="1724657863965" duration="6345000" />
+      <workItem from="1724665980581" duration="140000" />
+      <workItem from="1724666243107" duration="1041000" />
+      <workItem from="1724683378803" duration="11000" />
+      <workItem from="1724726237041" duration="2350000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -312,7 +389,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724577049390</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="springboot3_mybatisPlus_springCache_redis_jms_email_jmx">
+      <option name="closed" value="true" />
+      <created>1724578528542</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1724578528542</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

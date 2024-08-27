@@ -30,8 +30,51 @@
     <artifactId>spring-boot-starter-aop</artifactId>
     </dependency>
     @使用@Aspect注解定义切面等
+
 6.测试框架junit4，测试套件
 
+7.监控功能 spring boot actuator
+<!--jmx-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+8.使用Caffeine实现缓存
+
+    <dependency>
+        <groupId>com.github.ben-manes.caffeine</groupId>
+        <artifactId>caffeine</artifactId>
+    </dependency>
+    <!--redis-->
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-redis</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-cache</artifactId>
+    </dependency>
+    @EnableCaching
+    @CachePut
+    @Cacheable
+    @Cacheable
+
+    @Configuration
+    @Log4j2
+    public class RedisConfiguration {
+    
+        @Bean
+        public RedisTemplate redisTemplate(RedisConnectionFactory redisConnectionFactory){
+            log.info("开始创建redis模板对象");
+            RedisTemplate redisTemplate = new RedisTemplate();
+            //设置redis连接工厂对象
+            redisTemplate.setConnectionFactory(redisConnectionFactory);
+            //设置reids key的序列化器
+            redisTemplate.setKeySerializer(new StringRedisSerializer());
+            return redisTemplate;
+        }
+    }
 
 # 消费端:
 

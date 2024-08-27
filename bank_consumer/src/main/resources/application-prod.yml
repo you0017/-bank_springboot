@@ -1,0 +1,55 @@
+spring:
+  activemq:
+    broker-url: tcp://activemq:61616
+    queue: bankMessages
+  cache:
+    type: redis
+    cacheName: message
+  data:
+    redis:
+      host: redis
+      port: 6379
+      database: 1
+      password: 1234
+
+  devtools:
+    restart:
+      enabled: true
+      additional-exclude: src/main/java #重启目录
+      additional-include: static/** #classpath下 static修改不重启
+
+  #@Async异步线程池
+  task:
+    execution:
+      pool:
+        max-size: 16
+        queue-capacity: 1000
+        keep-alive: 60s
+
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: 2092425375@qq.com
+    password: ubgehmzqniuteiee
+    properties:
+      mail:
+        smtp:
+          auth: true
+          from: 2092425375@qq.com
+          starttls:
+            enable: true
+          ssl:
+             enable: true
+
+
+
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: info
+  file:
+    path: bank_consumer/logs/
+
