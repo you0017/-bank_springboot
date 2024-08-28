@@ -58,7 +58,7 @@ spring:
         login-username: druid
         login-password: druid
         # IP白名单
-        allow: 127.0.0.1
+        allow:
         # IP黑名单（共同存在时，deny优先于allow）
         deny:
 
@@ -93,7 +93,7 @@ spring:
 
   devtools:
     restart:
-      enabled: true  #是否之车自动重启(热部署
+      enabled: false  #是否之车自动重启(热部署
       additional-paths: src/main/java #设置监听源码变更的目录 -> 这个目录中的文件变更，则重启
       exclude: static/** #排除监听的目录，不重启
 
@@ -109,10 +109,10 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "health,info"
     jmx:
       exposure:
-        include: "*"  # 默认情况下，一些敏感端点是禁用的，可以通过此配置启用
+        include: "health,info"  # 默认情况下，一些敏感端点是禁用的，可以通过此配置启用
 
 logging:
   file:

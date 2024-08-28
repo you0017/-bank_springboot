@@ -4,35 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email_jmx">
-      <change afterPath="$PROJECT_DIR$/bank_consumer/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/CORSConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/MyBatisPlusConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/OpenAPIConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/task/RedisTask.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application-prod.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bank_web/src/test/java/com/yc/mapper/OpRecordMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email_jmx，加了docker的配置文件，并且区分了yml环境">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/BankConsumerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/CacheServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/service/impl/CacheServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/MailBiz.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/java/com/yc/util/MailBiz.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-prod.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/BankWebApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/OpType.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/bean/OpType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/RedisConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/config/RedisConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/controller/BankController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/controller/BankController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/mapper/AccountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/mapper/AccountMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/mapper/OpRecordMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/java/com/yc/mapper/OpRecordMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application-prod.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/test/java/com/yc/mapper/AccountMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/test/java/com/yc/mapper/AccountMapperTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,38 +52,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit4",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4": "",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "F:/java/java/yc/Three_installments/bank_springboot/bank_web/src/main/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit4&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4&quot;: &quot;&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;F:/java/java/yc/Three_installments/bank_springboot/bank_web/src/main/resources&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;,
+      &quot;redis&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -267,7 +246,13 @@
       <workItem from="1724665980581" duration="140000" />
       <workItem from="1724666243107" duration="1041000" />
       <workItem from="1724683378803" duration="11000" />
-      <workItem from="1724726237041" duration="2350000" />
+      <workItem from="1724726237041" duration="4198000" />
+      <workItem from="1724738005128" duration="75000" />
+      <workItem from="1724744715188" duration="1984000" />
+      <workItem from="1724808045592" duration="689000" />
+      <workItem from="1724808934184" duration="149000" />
+      <workItem from="1724815266876" duration="1647000" />
+      <workItem from="1724825387461" duration="561000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -397,7 +382,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724578528542</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="springboot3_mybatisPlus_springCache_redis_jms_email_jmx，加了docker的配置文件，并且区分了yml环境">
+      <option name="closed" value="true" />
+      <created>1724728795277</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1724728795277</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -428,6 +421,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="springboot3_mybatisPlus_springCache_redis_jms_email" />
     <MESSAGE value="springboot3_mybatisPlus_springCache_redis_jms_email_jmx" />
-    <option name="LAST_COMMIT_MESSAGE" value="springboot3_mybatisPlus_springCache_redis_jms_email_jmx" />
+    <MESSAGE value="springboot3_mybatisPlus_springCache_redis_jms_email_jmx，加了docker的配置文件，并且区分了yml环境" />
+    <option name="LAST_COMMIT_MESSAGE" value="springboot3_mybatisPlus_springCache_redis_jms_email_jmx，加了docker的配置文件，并且区分了yml环境" />
   </component>
 </project>
