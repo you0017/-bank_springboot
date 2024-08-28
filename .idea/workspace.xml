@@ -6,11 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a491d411-c826-429a-a91f-901ef0667d79" name="Changes" comment="springboot3_mybatisPlus_springCache_redis_jms_email_jmx，加了docker的配置文件，并且区分了yml环境">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bank_web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +253,7 @@
       <workItem from="1724808045592" duration="689000" />
       <workItem from="1724808934184" duration="149000" />
       <workItem from="1724815266876" duration="1647000" />
-      <workItem from="1724825387461" duration="561000" />
+      <workItem from="1724825387461" duration="1253000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -390,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724728795277</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="springboot3_mybatisPlus_springCache_redis_jms_email_jmx，加了docker的配置文件，并且区分了yml环境">
+      <option name="closed" value="true" />
+      <created>1724825961658</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1724825961658</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

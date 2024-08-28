@@ -1,15 +1,14 @@
-# 使用 OpenJDK 17 基础镜像
-FROM openjdk:17-jdk-alpine
+# 添加 Java 17 镜像来源
+FROM openjdk:17-jdk
 
-# 设置工作目录
-WORKDIR /app
+# 添加参数
+ARG JAR_FILE
 
-# 复制子项目的 JAR 文件到容器中
-# 需要替换为实际的子项目 JAR 文件名
-COPY target/bank_web.jar bank_web.jar
+# 添加 Spring Boot 包, JAR_FILE 参数就是从 Docker Maven 插件中指定的构建参数
+ADD target/${JAR_FILE} bank_web.jar
 
-# 暴露应用的端口
+#暴露一个端口
 EXPOSE 8080
 
-# 运行应用
-CMD ["java", "-jar", "bank_web.jar"]
+# 执行启动命令  即容器入口的命令   java -jar app.jar
+ENTRYPOINT ["java","-Dspring.profiles.active=prod","-Djava.security.egd=file:/dev/./urandom","-jar","/bank_web.jar"]

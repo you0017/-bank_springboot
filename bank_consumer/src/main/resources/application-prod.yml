@@ -2,6 +2,8 @@ spring:
   activemq:
     broker-url: tcp://activemq:61616
     queue: bankMessages
+    user: artemis
+    password: artemis
   cache:
     type: redis
     cacheName: message
