@@ -5,7 +5,7 @@ FROM openjdk:17-jdk
 ARG JAR_FILE
 
 # 添加 Spring Boot 包, JAR_FILE 参数就是从 Docker Maven 插件中指定的构建参数
-ADD target/${JAR_FILE} bank_cunsumer.jar
+ADD target/${JAR_FILE} bank_consumer.jar
 
 #暴露一个端口
 EXPOSE 8081

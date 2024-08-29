@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/bank_consumer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_consumer/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bank_web/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bank_web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bank_web/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +129,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BankConsumerApplication">
+  <component name="RunManager" selected="Spring Boot.BankWebApplication">
     <configuration name="AccountMapperTest.testPage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="bank_web" />
       <extension name="coverage">
@@ -209,8 +208,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.BankConsumerApplication" />
         <item itemvalue="Spring Boot.BankWebApplication" />
+        <item itemvalue="Spring Boot.BankConsumerApplication" />
         <item itemvalue="JUnit.OpRecordMapperTest.Page" />
         <item itemvalue="JUnit.AccountMapperTest.testPage" />
         <item itemvalue="JUnit.OpRecordMapperTest.selectByAccountId" />
@@ -253,7 +252,10 @@
       <workItem from="1724808045592" duration="689000" />
       <workItem from="1724808934184" duration="149000" />
       <workItem from="1724815266876" duration="1647000" />
-      <workItem from="1724825387461" duration="1253000" />
+      <workItem from="1724825387461" duration="2182000" />
+      <workItem from="1724827646135" duration="93000" />
+      <workItem from="1724834795883" duration="379000" />
+      <workItem from="1724895473017" duration="10000" />
     </task>
     <task id="LOCAL-00001" summary="springboot3_mybatisPlus_springCache_redis_jms_email">
       <option name="closed" value="true" />
@@ -399,7 +401,15 @@
       <option name="project" value="LOCAL" />
       <updated>1724825961658</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="springboot3_mybatisPlus_springCache_redis_jms_email_jmx，加了docker的配置文件，并且区分了yml环境">
+      <option name="closed" value="true" />
+      <created>1724826807547</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1724826807547</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
