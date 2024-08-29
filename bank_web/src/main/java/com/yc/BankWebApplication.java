@@ -12,7 +12,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @MapperScan("com.yc.mapper")
 @EnableCaching
 @EnableAsync//启动异步，线程池用
-//@EnableScheduling
 
 @EnableMBeanExport//启动监控类的机制，导出信息
 

@@ -128,15 +128,18 @@
                 //const host = window.location.host;
                 //const host = this.host;
                 //考虑nginx反向代理没有端口的问题
-                const host = window.location.host.includes(':') ? window.location.host : window.location.host + ':8080';
+                const host = window.location.host.includes(':') ? window.location.host : window.location.host + this.endpoint;
 
                 //const endpoint = '/shop_war/echo';
                 const endpoint = this.contextPath +'/ws';
                 //const endpoint = this.endpoint+ this.contextPath +'/AdminEcho';
                 //const endpoint = '/shop/echo';
 
+
+                let sid = Math.random();
+
                 // 动态生成 WebSocket 的 URL
-                const wsUrl = `${protocol}://${host}${endpoint}`;
+                const wsUrl = `${protocol}://${host}${endpoint}/${sid}`;
                 //const wsUrl = `${protocol}://${host}:${endpoint}`;
 
                 // 创建 WebSocket 连接

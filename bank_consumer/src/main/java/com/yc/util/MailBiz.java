@@ -48,6 +48,8 @@ public class MailBiz {
         }catch(Exception e){
             e.printStackTrace();
         }
+
+
         Message build = Message.builder().context(content).subject(subject).messageBean(mb).time(time).build();
         ValueOperations valueOperations = redisTemplate.opsForValue();
         valueOperations.set(bankName+time,build);
